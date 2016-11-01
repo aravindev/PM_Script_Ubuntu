@@ -32,3 +32,5 @@ echo 'auto' > '/sys/bus/usb/devices/1-5/power/control';
 echo 'auto' > '/sys/bus/i2c/devices/i2c-4/device/power/control';
 echo SATA_ALPM_ENABLE=true | sudo tee /etc/pm/config.d/sata_alpm
 gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_blink_mode off
+gsettings set org.gnome.desktop.interface cursor-blink false
+echo 'auto' > '/sys/bus/pci/devices/0000:01:00.0/power/control';
